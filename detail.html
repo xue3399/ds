@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="css/base.css"/>
+    <link rel="stylesheet/less" href="less/detail.less"/>
+    <link rel="stylesheet" href="css/pingfen.css"/>
+    <link rel="stylesheet" href="css/jq22.css"/>
+    <link rel="stylesheet" href="css/magiczoomplus.css"/>
+    <script src="js/jquery.js"></script>
+    <script src="js/star.js"></script>
+    <!--加入购物车计算-->
+    <script src="js/finish.js"></script>
+
+    <script src="js/jq22.js"></script>
+    <script src="js/mzp-packed.js"></script>
+</head>
+<body>
+    <!--        header  start       -->
+    <header>
+        <div class="header_container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo_03.jpg" alt=""/></a>
+            </div>
+            <nav>
+                <ul class="header_ul clearfix">
+                    <li><a href="index.html" class="active">首页</a></li>
+                    <li><a href="">衬衫</a></li>
+                    <li><a href="">卫衣</a></li>
+                    <li><a href="">裤子</a></li>
+                    <li><a href="">联系我们</a></li>
+                </ul>
+            </nav>
+            <div class="bg_color" style="display: none">
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+                <a href=""></a>
+            </div>
+        </div>
+    </header>
+    <!--        header  end       -->
+
+    <!--container  start-->
+        <div class="container1">
+            <div class="subContainer clearfix">
+
+
+
+
+                <!--左侧点击图片切换大图-->
+
+                <div class="t1">
+                    <!--<img src="images/gotop.gif" id="gotop" />-->
+                    <div id="showArea">
+                        <a href="images/blue_one.jpg" rel="zoom1" rev="images/blue_one_big.jpg"><img src="images/blue_one_big.jpg" /></a>
+                        <a href="images/blue_two.jpg" rel="zoom1" rev="images/blue_two_big.jpg"><img src="images/blue_two_big.jpg" /></a>
+                        <a href="images/blue_three.jpg" rel="zoom1" rev="images/blue_three_big.jpg"><img src="images/blue_three_big.jpg" /></a>
+                        <!--<a href="images/blue_four.jpg" rel="zoom1" rev="images/blue_four_big.jpg"><img src="images/blue_four_big.jpg" /></a>-->
+                        <a href="images/blue_five.jpg" rel="zoom1" rev="images/blue_five_big.jpg"><img src="images/blue_five_big.jpg" /></a>
+                        <!--<a href="images/blue_six.jpg" rel="zoom1" rev="images/blue_six_big.jpg"><img src="images/blue_six_big.jpg" /></a>-->
+                        <a href="images/blue_seven.jpg" rel="zoom1" rev="images/blue_seven_big.jpg"><img src="images/blue_seven_big.jpg" /></a>
+                        <a href="images/blue_one.jpg" rel="zoom1" rev="images/blue_one_big.jpg"><img src="images/blue_one_big.jpg" /></a>
+                    </div>
+                    <!--<img src="images/gobottom.gif" id="gobottom"  />-->
+                </div>
+                <div class="t2">
+                    <a href="images/blue_one_small.jpg" id="zoom1" class="MagicZoom MagicThumb"><img src="images/blue_one_small.jpg" id="main_img" class="main_img" style="width:541px; height:700px;" /></a>
+                </div>
+
+                <!--左侧点击图片切换大图-->
+
+
+                <div class="content">
+                    <strong>Business casual shirt</strong><br />
+                    <strong>免烫商务休闲衬衣</strong>
+                    <div class="rmb clearfix">
+                        <span>RMB：<i>200</i></span>
+                        <span>345.00</span>
+                        <span>评价此商品</span>
+                    </div>
+                    <div class="content_blue">
+                        <span>天蓝色</span>
+                        <span>款式：502462-635</span>
+                    </div>
+                    <div class="content_img clearfix">
+                        <a href="javascript:;"><img src="images/ditail_11.jpg" alt="天蓝色"></a>
+                        <a href="javascript:;"><img src="images/ditail_13.jpg" alt="蓝色"></a>
+                    </div>
+                    <h3>尺码表</h3>
+                    <div class="content_price">
+                        <select  class="pro_size">
+                            <option value="尺码">尺码</option>
+                            <option value="L">L</option>
+                            <option value="X">X</option>
+                            <option value="XL">XL</option>
+                            <option value="XL">XXL</option>
+                            <option value="XL">3XL</option>
+                        </select>
+                        <span>数量</span>
+                        <input type="number" min="1" max="100" value="1"  id="num_sort"/>
+                        <span>总计:</span>
+                        <i  class="pro_price">400</i>元
+                    </div>
+                    <input type="button" value="加入购物车"  id="cart"/>
+                    <div class="content_text">
+                        <h4>产品说明</h4>
+                        <p>全新精品高支棉衬衫再次提升品质，精选100%新疆长绒棉织造而成，平整度好，短绒少； 80-100高支双股经纬交织，带
+                            来无与伦比的舒适享受而且面料反光效果好，具
+                            有漂亮的光泽，质感上佳，有利于免烫效果的维持。※不仅如此，深受消费者欢迎的经典款式使精品高</p>
+                    </div>
+                </div>
+            </div>
+            <script>
+                $(function(){
+                    var $i = $("div.content_price i");
+                    var price = $i.text();
+                    $("#num_sort").change(function(){
+                        var num = $(this).val();
+                        var amount = num * price;
+                        $i.text( amount );
+                    }).change();
+                    $(".content_img img").click(function () {
+                        var alt = $(this).attr("alt");  //获取alt值
+                        $(".content_blue span:first-of-type").text(alt);	//将alt的值写入strong标签
+                    })
+                })
+            </script>
+            <!--产品介绍选项卡-->
+            <div class="product clearfix">
+                <img src="images/ditail_28.jpg" alt=""/>
+                <div id="box">
+                    <ul class="clearfix">
+                        <li class="active">产品属性</li>
+                        <li>产品尺码表</li>
+                        <li>产品介绍</li>
+                    </ul>
+                    <div class="select">
+                        沿用风靡百年的经典全棉牛津纺面料，通过领先的液氨整理技术使面料的抗皱性能更上一层。延续
+                        简约、舒适、健康设计理念，特推出免烫、易打理的精细免烫牛津纺长袖衬衫系列。沿用风靡百
+                        年的经典全棉牛津纺面料，通过领先的液氨整理技术，使面料的抗皱性能更上一层。延续简约、舒
+                        适、健康设计理念，特推出免烫、易打理的精细免烫牛津纺长袖衬衫系列。沿用风靡百年的经典全
+                        棉牛津纺面料，通过领先的液氨整理技术，使面料的抗皱性能更上一层延续简约、舒适、健康设计
+                        理念，特推出免烫、易打理的精细免烫牛津纺长袖衬衫系列。
+                    </div>
+                    <div>
+                        沿用风靡百年的经典全棉牛津纺面料，通过领先的液氨整理技术使面料的抗皱性能更上一层。延续
+                        简约、舒适、健康设计理念，特推出免烫、易打理的精细免烫牛津纺长袖衬衫系列。沿用风靡百
+                        年的经典全棉牛津纺面料，通过领先的液氨整理技术，使面料的抗皱性能更上一层。延续简约、舒
+                        适、健康设计理念，特推出免烫、易打理
+                    </div>
+                    <div>
+                        沿用风靡百年的经典全棉牛津纺面料，通过领先的液氨整理技术使面料的抗皱性能更上一层。延续
+                        简约、舒适、健康设计理念，特推出免烫、易打理的精细免烫牛津纺长袖衬衫系列。沿用风靡百
+                        年的经典全棉牛津纺面料，通过领先的液氨整理技术，使面料的抗皱性能更上一层。延续简约、舒
+                        适、健康设计理念，特推出免烫、易打理的精细免烫牛津纺长袖衬衫系列。沿用风靡百年的经典全
+                        棉牛津纺面料，通过领先的液氨整理技术，。
+                    </div>
+                </div>
+            </div>
+            <script type="text/javascript">
+                $("ul li").click(function(){
+                    var index=$("#box ul li").index(this)
+                    $(this).addClass("active").siblings().removeClass("active")
+                    $("#box div").eq(index).addClass("select").siblings().removeClass("select")
+                })
+            </script>
+            <!--产品介绍选项卡-->
+            <div class="pingjia">
+                <p>评价和反馈</p>
+            </div>
+            <h5>还没有顾客评价过此商品</h5>
+            <!--商品评分-->
+            <div id="content" class="global_module">
+                <div class="pro_rating">
+                    <ul class="rating nostar">
+                        <li class="one">
+                            <a href="javascript:;" title="1分">1</a>
+                        </li>
+                        <li class="two">
+                            <a href="javascript:;" title="2分">2</a>
+                        </li>
+                        <li class="three">
+                            <a href="javascript:;" title="3分">3</a>
+                        </li>
+                        <li class="four">
+                            <a href="javascript:;" title="4分">4</a>
+                        </li>
+                        <li class="five">
+                            <a href="javascript:;" title="5分">5</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!--商品评分-->
+             <h3>推&nbsp;荐&nbsp;产&nbsp;品</h3>
+            <!--单张图片轮播-->
+            <div class="bodyCon08">
+                <div class="students">
+
+                    <div id="four_flash">
+                        <div class="flashBg">
+                            <ul class="mobile">
+                                <li>
+                                    <img src="images/ditail_32.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/ditail_34.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/ditail_36.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/ditail_38.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/ditail_32.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/ditail_34.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/ditail_36.jpg" />
+                                </li>
+                                <li>
+                                    <img src="images/ditail_38.jpg" />
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="but_left"><img src="images/ditail_40.jpg" /></div>
+                        <div class="but_right"><img src="images/ditail_43.jpg" /></div>
+                    </div>
+                </div>
+            </div>
+            <script>
+                var _index5=0;
+                $("#four_flash .but_right img").click(function(){
+                    _index5++;
+                    var len=$(".flashBg ul.mobile li").length;
+                    if(_index5+5>len){
+                        $("#four_flash .flashBg ul.mobile").stop().append($("ul.mobile").html());
+                    }
+                    $("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*260},1000);
+                });
+
+
+                $("#four_flash .but_left img").click(function(){
+                    if(_index5==0){
+                        $("ul.mobile").prepend($("ul.mobile").html());
+                        $("ul.mobile").css("left","-1380px");
+                        _index5=6
+                    }
+                    _index5--;
+                    $("#four_flash .flashBg ul.mobile").stop().animate({left:-_index5*260},1000);
+                });
+            </script>
+            <!--单张图片轮播-->
+        </div>
+    <!--container  end-->
+
+    <!--footer 开始-->
+    <footer>
+        <div class="footer_container">
+            <h4>Jane Shopping，更多优惠产品，最后机会，不容错过!</h4>
+            <div class="line"></div>
+            <div class="footer_list_box clearfix">
+                <div class="footer_list">
+                    <p>购物指南</p>
+                    <a href="">网上购买</a>
+                    <a href="">订单追踪</a>
+                    <a href="">如何成为VIP</a>
+                </div>
+                <div class="footer_list">
+                    <p>探索</p>
+                    <a href="">免烫高织棉衬衣</a>
+                    <a href="">免烫斜纹衬衣</a>
+                    <a href="">棉小方格正装衬衣</a>
+                </div>
+                <div class="footer_list">
+                    <p>关于我们</p>
+                    <a href="">关于Jane Shopping</a>
+                    <a href="">门店地址</a>
+                </div>
+                <div class="footer_list">
+                    <p>联系我们</p>
+                    <a href="">在线客服</a>
+                    <a href="">向我们发送email</a>
+                </div>
+                <div class="footer_list">
+                    <p>输入您的电子邮箱</p>
+                    <a href="#">获取jane  shopping最新消息</a>
+                    <input type="text" placeholder="请输入邮箱地址"/>
+                </div>
+            </div>
+            <div class="footer_foot">
+                <p>梓钧齐商业（上海）有限公司 沪ICP备14016998号-1</p>
+            </div>
+        </div>
+    </footer>
+    <!--footer 结束-->
+</body>
+<script src="js/less.js"></script>
+</html>

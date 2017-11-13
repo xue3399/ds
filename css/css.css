@@ -1,0 +1,19 @@
+*{margin:0; padding:0;}
+ul{list-style:none}
+ul,li,p,dl,dt,dd{display:block;}
+body{font-size:14px; font-family:"宋体"; color:#333;}
+a{text-decoration:none; color:#0287CA; font-size:14px; font-family:"microsoft yahei";}
+
+.ad{width:100%; margin:0px auto; background:#eee; height:395px;
+ overflow:hidden; position:relative;}
+.ad img{display: block;
+ width: 100%;}
+.ad .slider{position:absolute;}
+.ad .slider li{display:inline;}
+.ad .num{position:absolute; right:40px; bottom:5px;}
+.ad .num li{width:20px; height:4px; background:white; font-size:12px;
+margin:3px 1px; text-align:center; cursor:pointer; float:left;
+color:orangered;}
+.ad .num li.on{background:#999;}
+
+

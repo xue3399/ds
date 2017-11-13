@@ -1,0 +1,356 @@
+@charset "UTF-8";
+body{
+  font-family: "microsoft yahei";
+  font-size: 18px;
+}
+.gao(@height:107px,@line-height:107px){
+  height:@height;
+  line-height:@line-height;
+}
+
+.container{
+  width: 1170px;
+  margin: 0 auto;
+}
+
+
+//header   开始
+header{
+  width: 100%;
+}
+.header_container{
+  position: relative;
+  .container;
+  .gao;
+  .logo{
+    width: 174px;
+    float: left;
+    margin-top: 21px;
+  }
+  nav{
+    width: 590px;
+    float: right;
+
+    ul.header_ul>li{
+      float: left;
+      width: 118px;
+      margin-top: 37px;
+      a{
+        display: block;
+        text-align: center;
+        .gao(@height: 32px,@line-height: 32px);
+        color: #3f3f3f;
+        &:hover{
+          background: #c2c6e1;
+          color: #fff;
+        }
+      }
+      a.active{background: #c2c6e1;color: #fff;}
+    }
+  }
+  .bg_color{
+    position: absolute;
+    right: 23px;
+    top: 78px;
+    a{
+      display: block;
+      width: 12px;
+      height: 12px;
+      float: left;
+      margin-right: 10px;
+    }
+
+    a:first-of-type{background: #c2c6e1;}
+    a:nth-of-type(2){background: #47baea;}
+    a:nth-of-type(3){background: #e047ea;}
+    a:nth-of-type(4){background: #47ea6a;}
+    a:nth-of-type(5){background: #ea479b; margin-right: 0}
+  }
+}
+//header  结束
+
+
+//精品 jing   开始
+.kuan(@wd:264px){
+  width: @wd;
+}
+.se(@col:#000){
+  color: @col;
+}
+.zi(@font:20px){
+  font-size: @font;
+}
+.jing{
+  width: 100%;
+  margin: 60px auto 40px;
+}
+.jing_box{
+  .container;
+  aside{
+    .kuan;
+    float: left;
+    h2{
+      font-weight: bold;
+      .se;
+      .zi;
+    }
+    h2:nth-of-type(2){
+      margin: 11px 0 20px 0;
+    }
+    ul.treeview{
+      margin-bottom: 40px;
+      li.expanded{
+        span{
+          cursor: pointer;
+          display: block;
+          font-weight: bold;
+          .zi(@font: 16px);
+          .kuan;
+          .se;
+          margin: 10px 0 10px 0;
+          background: url("../images/dian_03.jpg") no-repeat 51px 5px;
+        }
+        ul{
+           li{
+             cursor: pointer;
+             .se(@col: #666);
+             .zi(@font: 14px);
+             padding-left: 32px;
+             .gao(@height: auto,@line-height: 25px);
+             background: url("../images/dian_10.jpg") no-repeat 14px center;
+             &:hover{
+               background: url("../images/dian_07.jpg") no-repeat 14px center;
+             }
+           }
+         }
+      }
+    }
+    .global_module{
+      h2{
+        font-weight: bold;
+        .se;
+        .zi;
+      }
+      h2:nth-of-type(2){
+        margin: 11px 0 20px 0;
+      }
+      .scrollNews{
+        height: 100px;
+        overflow:hidden;
+        li{
+          .gao(@height: auto,@line-height: 25px);
+          a{
+            .se(@col: #666);
+            &:hover{
+              .se(@col: #333);
+            }
+          }
+        }
+      }
+    }
+  }
+  section{
+    .kuan(@wd: 906px);
+    float: left;
+    padding-top: 20px;
+    p{
+      text-align: center;
+      border: 3px solid #666666;
+      margin: 0 auto;
+      font-weight: bold;
+      background: url("../images/xian_03.jpg") no-repeat center -20px;
+      z-index: 999;
+      .zi(@font: 22px);
+      .se;
+      .kuan(@wd: 275px);
+      .gao(@height: 38px,@line-height: 38px)
+    }
+    h3{
+      .kuan(@wd: 120px);
+      margin: 0 auto;margin-bottom: 30px;
+      font-weight: bold;
+      .se;
+      .zi(@font: 20px);
+      .gao(@height: 40px,@line-height: 40px)
+    }
+    a{
+      img{
+        display: block;
+        float: left;
+        margin-left: 20px;
+      }
+    }
+    .sec_img{
+      a{
+        display: block;
+        float: left;
+        img{
+          margin-bottom: 20px;
+          display: block;
+          .kuan(@wd: 264px);
+          .gao(@height: 220px)
+        }
+      }
+    }
+  }
+}
+
+.none{
+  display: none;
+}
+//精品分类  结束
+
+//简约休闲裤
+.jian{
+  .kuan(@wd: 100%);
+  img{
+    display: block;
+    width: 100%;
+    .gao(@height: 400px);
+  }
+}
+
+
+//new  新品
+.new{
+  .kuan(@wd: 100%);
+  margin-bottom: 40px;
+  .new_container{
+    .container;
+    position: relative;
+    p{
+      text-align: center;
+      border: 3px solid #666666;
+      margin: 60px auto 0;
+      font-weight: bold;
+      background: url("../images/xian_03.jpg") no-repeat center -20px;
+      z-index: 999;
+      .zi(@font: 22px);
+      .se;
+      .kuan(@wd: 275px);
+      .gao(@height: 38px,@line-height: 38px)
+    }
+    h3{
+      .kuan(@wd: 120px);
+      margin: 0 auto;
+      margin-bottom: 30px;
+      font-weight: bold;
+      .se;
+      .zi(@font: 20px);
+      .gao(@height: 40px,@line-height: 40px)
+    }
+    .list{
+      .gao(@height: 462px);
+      width: 1170px;
+      overflow: hidden;
+      .swiper-container{
+        position: absolute;
+        left: 0;
+        .kuan(@wd: 1170px);
+        .swiper-wrapper{
+          .gao(@height: 462px);
+          .swiper-slide{
+            float: left;
+            display: inline;
+            a{
+              display: block;
+              img{
+                border: 0;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+}
+
+span.imageMask { background: white; filter: alpha(opacity=0); -moz-opacity: 0; -khtml-opacity: 0; opacity: 0; }
+span.imageOver { background: url(../images/zoom.gif) no-repeat 50% 50%; filter: alpha(opacity=60); -moz-opacity: 0.6; -khtml-opacity: 0.6; opacity: 0.6; }
+
+
+//new  新品
+
+
+//footer 开始
+footer{
+  .gao(@height: auto);
+  .kuan(@wd: 100%);
+  background: #000;
+  .footer_container{
+    .container;
+    padding-top: 27px;
+    h4{
+      .zi(@font: 16px);
+      .se(@col: #fff);
+      .kuan(@wd: 394px);
+      .gao(@height: 24px,@line-height: 24px);
+      border-bottom: 1px solid #fff;
+      margin-bottom: 26px;
+      font-weight: bold;
+    }
+    .line{
+      border-bottom: 1px solid #333;
+      height: 1px;
+    }
+    .footer_list_box{
+      border-bottom: 1px solid #333;
+      .footer_list{
+        padding-bottom: 21px;
+        .kuan(@wd: 125px);
+        float: left;
+        p{
+          .zi(@font: 14px);
+          .se(@col: #fff);
+        }
+        a{
+          .se(@col: #fff);
+          .zi(@font: 14px);
+          display: block;
+          .gao(@height: auto,@line-height: 28px);
+
+        }
+      }
+      .footer_list:first-of-type{margin-right: 110px;}
+      .footer_list:nth-of-type(2){
+        margin-right: 122px;
+      }
+      .footer_list:nth-of-type(3){
+        margin-right: 138px;
+      }
+      .footer_list:nth-of-type(4){
+        margin-right: 57px;
+      }
+      .footer_list:last-of-type{
+        width: 200px;
+        a{
+          display: block;
+          width: 185px;
+        }
+        input{
+          .kuan(@wd: 200px);
+          .gao(@height: 32px,@line-height: 32px);
+          border: 1px solid #323232;
+          .se(@col: #323232);
+          background: #000;
+          .zi(@font: 14px);
+          padding-left: 20px;
+        }
+      }
+    }
+    .footer_foot{
+      p{
+        .gao(@height: auto,@line-height: 95px);
+        width: 368px;
+        margin: 0 auto;
+        .zi(@font: 16px);
+        .se(@col: #fff);
+      }
+    }
+  }
+}
+
+//footer  结束
+

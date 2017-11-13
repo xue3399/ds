@@ -1,0 +1,19 @@
+/*/!* CSS Document *!/*/
+/*.box{width:620px;margin:20px auto}*/
+.subContainer{float: left;
+    width: 1170px;
+    margin: 0 auto;
+}
+.subContainer .t1{width:145px;float:left;margin-left: 50px;}
+.subContainer .t2{width:500px;text-indent:0;float:left; height: 700px; margin-left: -10px; margin-bottom: 40px;}
+.subContainer .t2 img{text-indent:0;}
+.subContainer #showArea img{cursor:pointer;display:block;margin-bottom:5px;width:111px;padding:1px;border:6px solid #ccc;height:98px;float:left}
+.subContainer #main_img{cursor:pointer;display:block;}
+.subContainer #gotop{cursor:pointer;display:block;margin-left:36px}
+.subContainer #gobottom{cursor:pointer;display:block;margin-left:36px}
+.subContainer #showArea{overflow:hidden; }
+.subContainer #showArea a{
+    display: block;
+    width: 114px;
+    height: 94px;
+}
